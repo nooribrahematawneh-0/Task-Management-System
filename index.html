@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TaskFlow - Organize projects and manage tasks efficiently.">
+    <title>DevTrack</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>DevTrack</h1>
+        <p>Organize your work. Achieve your goals.</p>
+    </header>
+
+    <main>
+        <section id="task-section">
+            <h2>My Tasks</h2>
+
+            <form id="task-form">
+                <label for="task-input">New task</label>
+                <input
+                    type="text"
+                    id="task-input"
+                    placeholder="Enter a task..."
+                    required
+                >
+                <button type="submit">Add Task</button>
+            </form>
+            <div id="filter-container" style="margin-bottom: 20px; display: flex; gap: 8px;">
+                <button type="button" class="filter-btn active" data-filter="all">All</button>
+                <button type="button" class="filter-btn" data-filter="active">Active</button>
+                <button type="button" class="filter-btn" data-filter="completed">Completed</button>
+            </div>
+<!-- معلومات و أزرار التحكم الإضافية -->
+            <div id="tasks-footer-controls" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; font-size: 14px; color: #64748b; flex-wrap: wrap; gap: 10px;">
+                <span id="tasks-counter">0 items left</span>
+                <div style="display: flex; gap: 8px;">
+                    <button type="button" id="clear-completed-btn" style="padding: 6px 12px; font-size: 12px; background: #64748b;">Clear Completed</button>
+                    <button type="button" id="clear-all-btn" style="padding: 6px 12px; font-size: 12px; background: #dc2626;">Clear All</button>
+                </div>
+            </div>
+            <ul id="task-list">
+                <!-- Tasks will appear here -->
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 TaskFlow</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
